@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DelayFn } from "../helpers/delayFn";
+import { toast } from "react-toastify";
 
 export const useFetch = (callback) => {
     const [isLoading, setIsLoading]= useState(false);
@@ -15,6 +16,7 @@ export const useFetch = (callback) => {
         }
         catch (error) {
             setError(error.message);
+            toast.error(error.message)
         }
         finally {
             setIsLoading(false)
