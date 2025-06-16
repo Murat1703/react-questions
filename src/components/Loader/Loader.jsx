@@ -8,3 +8,9 @@ export function Loader(){
         </div>
     )
 }
+
+export function SmallLoader(){
+    return(
+        <span className={cls.smallLoader}></span>
+    )
+}
