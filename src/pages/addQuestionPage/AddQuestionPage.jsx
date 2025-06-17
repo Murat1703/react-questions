@@ -4,6 +4,7 @@ import { useActionState } from 'react';
 import { DelayFn } from '../../helpers/delayFn';
 import { toast } from 'react-toastify';
 import { API_URL } from '../../constants';
+import { Loader } from '../../components/Loader';
 
 const createCardAction = async(_prevState, formData) => {
     try {
@@ -42,12 +43,14 @@ const createCardAction = async(_prevState, formData) => {
 
 }
 
-export const AddQuestionPage = () => {
+const AddQuestionPage = () => {
 
     const [formState, formAction, isPending]= useActionState(createCardAction, {clearForm: true});
 
     return( 
         <>
+            {isPending && <Loader/>}
+
             <h1 className={cls.formTitle}>Add Question page</h1>
             <div className={cls.formContainer}>
                 <form action={formAction} className={cls.form}>
@@ -121,3 +124,5 @@ export const AddQuestionPage = () => {
         </>
     )
 }
+
+export default AddQuestionPage
