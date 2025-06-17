@@ -3,6 +3,7 @@ import {MainLayout} from './components/MainLayout'
 import { HomePage } from './pages/homepage'
 import { NotFound } from './pages/notFound'
 import { QuestionPage } from './pages/questionPage'
+import { AddQuestionPage } from './pages/addQuestionPage'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path='/' element ={<HomePage/>} />
           <Route path='/forbidden' element ={<div>forbidden</div>} />
-          <Route path='/addquestion' element ={<div>addquestion</div>} />
+          <Route path='/addquestion' element ={<AddQuestionPage />} />
           <Route path='/question/:id' element ={<QuestionPage />} />
           <Route path='*' element ={<NotFound />} />
         </Route>
