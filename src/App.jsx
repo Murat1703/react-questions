@@ -4,7 +4,7 @@ import { HomePage } from './pages/homepage'
 import { NotFound } from './pages/notFound'
 import { QuestionPage } from './pages/questionPage'
 import {AddQuestionPageLazy} from './pages/addQuestionPage'
-import { EditQuestionPage } from './pages/editQuestionPage'
+import { EditQuestionPageLazy } from './pages/editQuestionPage'
 import { AuthProvider } from './auth/AuthProvider'
 import { useAuth } from './hooks/isAuth'
 import { ForbiddenPage } from './pages/forbiddenPage'
@@ -35,7 +35,7 @@ function App() {
             <Route path='/question/:id' element ={<QuestionPage />} />
             <Route element={<ProtectedRoutes />}>
               <Route path='/addquestion' element ={<AddQuestionPageLazy />} />
-              <Route path='/editquestion/:id' element ={<EditQuestionPage />} />
+              <Route path='/editquestion/:id' element ={<EditQuestionPageLazy />} />
             </Route>
             <Route path='*' element ={<NotFound />} />
           </Route>
