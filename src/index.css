@@ -1,9 +1,4 @@
 :root {
-  --main-bg-color: #23272F;
-  --text-color: #fff;
-
-  --btn-bg-color: #383b3f;
-  --btn-text-color: #fff;
 
   --card-bg-color: #343a46;
 
@@ -15,7 +10,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -39,11 +33,20 @@ a:hover {
 
 body {
   background-color: var(--main-bg-color);
+  color: var(--text-color);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.darkLayout{
+    --main-bg-color: #23272F;
+    --text-color:#fff;
+    --btn-bg-color: #16444f;
+    --btn-text-color: #fff;
+    --card-bg-color: #343a46;
 }
 
 
@@ -58,12 +61,12 @@ h1 {
     --card-bg-color: #ebedf0;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --main-bg-color: #23272F;
     --text-color:#fff;
     --btn-bg-color: #16444f;
     --btn-text-color: #fff;
-    --card-bg-color: #343a46;
-  }
+    --card-bg-color: #343a46;  }
 }

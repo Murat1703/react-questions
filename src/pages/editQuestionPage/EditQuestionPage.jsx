@@ -8,7 +8,7 @@ import { Loader } from '../../components/Loader'
 import { useState } from 'react'
 import { EditQuestion } from './EditQuestion'
 
-export const EditQuestionPage = () => {
+const EditQuestionPage = () => {
     const {id} = useParams(); 
     const [question, setQuestion] = useState(null);
 
@@ -32,3 +32,5 @@ export const EditQuestionPage = () => {
         </>
     )
 }
+
+export default EditQuestionPage
